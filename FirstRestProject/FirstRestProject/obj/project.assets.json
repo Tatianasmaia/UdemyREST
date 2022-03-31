@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
+      "projectUniqueName": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
       "projectName": "FirstRestProject",
-      "projectPath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
+      "projectPath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
       "packagesPath": "C:\\Users\\Tatiana\\.nuget\\packages\\",
-      "outputPath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject\\obj\\",
+      "outputPath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
