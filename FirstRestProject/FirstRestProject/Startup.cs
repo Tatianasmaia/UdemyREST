@@ -36,6 +36,9 @@ namespace FirstRestProject
             services.AddDbContext<MySqlContext>(options =>
                             options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
 
+            //For versioning API
+            services.AddApiVersioning();
+
             //Dependency Injection
             services.AddScoped<IPersonService, PersonServiceImplementation>();
         }

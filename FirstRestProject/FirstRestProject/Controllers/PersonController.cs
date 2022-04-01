@@ -9,8 +9,9 @@ using FirstRestProject.Model;
 
 namespace FirstRestProject.Controllers
 {
+    [ApiVersion("1")]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     {
 

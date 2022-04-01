@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uq6sYLJ1q74b08J/u/GjiahNyT1b1BbrogWTUESiQIDulXCgdn+8RRn4UwU1Dkj+LKaFKQiVsNgr41gIn6I8kQ==",
+  "dgSpecHash": "JT2HbueMQMD+r7ODD/8iokcXiJsgzwPXDhJjC7L2ls2OO2q9b3fZYmcZrLDs2HzwTQuHyEYw2Y+JBHx+pThEuw==",
   "success": true,
   "projectFilePath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tatiana\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\Tatiana\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\Tatiana\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
     "C:\\Users\\Tatiana\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.10\\microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",

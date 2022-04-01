@@ -29,3 +29,5 @@ C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0
 C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.csproj.CopyComplete
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.MvcApplicationPartsAssemblyInfo.cs
