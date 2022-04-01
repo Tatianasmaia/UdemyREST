@@ -21,3 +21,11 @@ C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0
 C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0\ref\FirstRestProject.dll
 C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.pdb
 C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.genruntimeconfig.cache
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\MySqlConnector.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Learning\REST\RESTProjects\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.csproj.CopyComplete

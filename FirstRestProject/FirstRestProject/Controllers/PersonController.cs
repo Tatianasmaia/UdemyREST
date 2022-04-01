@@ -15,24 +15,29 @@ namespace FirstRestProject.Controllers
     {
 
         private readonly ILogger<PersonController> _logger;
+
+        // Declaration of the service used
         private IPersonService _personService;
 
+        // Injection of an instance of IPersonService
+        // when creating an instance of PersonController
         public PersonController(ILogger<PersonController> logger, IPersonService personService)
         {
             _logger = logger;
             _personService = personService;
         }
 
-        //Find All
+        // Maps GET requests to https://localhost:{port}/api/person
+        // Get no parameters for FindAll -> Search All
         [HttpGet]
         public IActionResult Get()
         {
-
-
             return Ok(_personService.FindAll());
         }
-        
-        //Find by id
+
+        // Maps GET requests to https://localhost:{port}/api/person/{id}
+        // receiving an ID as in the Request Path
+        // Get with parameters for FindById -> Search by ID
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
@@ -42,8 +47,9 @@ namespace FirstRestProject.Controllers
             return Ok(person);
         }
 
-        //Find by id
-        //O que está no parâmetro vai pegar no JSON que vier no corpo do request e converter num objeto Person
+        // Maps POST requests to https://localhost:{port}/api/person/
+        // [FromBody] consumes the JSON object sent in the request body
+        // O que está no parâmetro vai pegar no JSON que vier no corpo do request e converter num objeto Person
         [HttpPost]
         public IActionResult Post([FromBody] Person person)
         {
@@ -52,6 +58,8 @@ namespace FirstRestProject.Controllers
             return Ok(_personService.Create(person));
         }
 
+        // Maps PUT requests to https://localhost:{port}/api/person/
+        // [FromBody] consumes the JSON object sent in the request body
         [HttpPut]
         public IActionResult Put([FromBody] Person person)
         {
@@ -60,7 +68,8 @@ namespace FirstRestProject.Controllers
             return Ok(_personService.Update(person));
         }
 
-        //Delete
+        /// Maps DELETE requests to https://localhost:{port}/api/person/{id}
+        // receiving an ID as in the Request Path
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {

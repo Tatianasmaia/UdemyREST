@@ -1,9 +1,11 @@
+using FirstRestProject.Model.Context;
 using FirstRestProject.Services;
 using FirstRestProject.Services.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,6 +31,10 @@ namespace FirstRestProject
         {
 
             services.AddControllers();
+
+            var connection = Configuration["MySQLConnection:MySQLConnectionString"];
+            services.AddDbContext<MySqlContext>(options =>
+                            options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
 
             //Dependency Injection
             services.AddScoped<IPersonService, PersonServiceImplementation>();
