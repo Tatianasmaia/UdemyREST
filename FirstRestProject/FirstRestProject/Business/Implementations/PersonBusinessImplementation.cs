@@ -1,11 +1,8 @@
-﻿using FirstRestProject.Model;
+﻿using FirstRestProject.Data.Converter.Implementations;
+using FirstRestProject.Data.VO;
+using FirstRestProject.Model;
 using FirstRestProject.Repository;
-using FirstRestProject.Model.Context;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace FirstRestProject.Business.Implementations
 {
@@ -13,32 +10,42 @@ namespace FirstRestProject.Business.Implementations
     {
         private readonly IRepository<Person> _repository;
 
+        private readonly PersonConverter _converter;
+
         public PersonBusinessImplementation(IRepository<Person> repository)
         {
             _repository = repository;
+            _converter = new PersonConverter();
         }
 
         // Returns all people
-        public List<Person> FindAll()
+        public List<PersonVO> FindAll()
         {
-            return _repository.FindAll();
+            return _converter.Parse(_repository.FindAll());
         }
 
         //Returns one person b id
-        public Person FindById(long id)
+        public PersonVO FindById(long id)
         {
-            return _repository.FindById(id);
+            return _converter.Parse(_repository.FindById(id));
         }
-
-        public Person Create(Person person)
+        /* Quando o objeto entra vem como VO e não dá para persistir na base de dados então é preciso fazer a conversão para entidade
+           Como entidade dá para persistir (Create) e o resultado é devolvido para personEntity
+           Depois converte-se a entidade para VO e devolve-se a resposta*/
+        public PersonVO Create(PersonVO person)
         {
-            return _repository.Create(person);
+            //O repositório trabalha com entidades por isso temos que converter
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
         }
 
         //Updates one person
-        public Person Update(Person person)
+        public PersonVO Update(PersonVO person)
         {
-            return _repository.Update(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(personEntity);
         }
 
         //Deletes a peron by its id

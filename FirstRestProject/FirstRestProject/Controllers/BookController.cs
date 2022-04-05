@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FirstRestProject.Model;
+using FirstRestProject.Data.VO;
 
 namespace FirstRestProject.Controllers
 {
@@ -52,7 +53,7 @@ namespace FirstRestProject.Controllers
         // [FromBody] consumes the JSON object sent in the request body
         // O que está no parâmetro vai pegar no JSON que vier no corpo do request e converter num objeto Person
         [HttpPost]
-        public IActionResult Post([FromBody] Book book)
+        public IActionResult Post([FromBody] BookVO book)
         {
             if (book == null) return BadRequest();
 
@@ -62,7 +63,7 @@ namespace FirstRestProject.Controllers
         // Maps PUT requests to https://localhost:{port}/api/book/
         // [FromBody] consumes the JSON object sent in the request body
         [HttpPut]
-        public IActionResult Put([FromBody] Book book)
+        public IActionResult Put([FromBody] BookVO book)
         {
             if (book == null) return BadRequest();
 
