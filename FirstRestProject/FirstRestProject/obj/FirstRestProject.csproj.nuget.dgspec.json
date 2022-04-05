@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj": {}
+    "C:\\Meee\\Learning\\UdemyREST\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj": {}
   },
   "projects": {
-    "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj": {
+    "C:\\Meee\\Learning\\UdemyREST\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
+        "projectUniqueName": "C:\\Meee\\Learning\\UdemyREST\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
         "projectName": "FirstRestProject",
-        "projectPath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
-        "packagesPath": "C:\\Users\\Tatiana\\.nuget\\packages\\",
-        "outputPath": "C:\\Learning\\REST\\RESTProjects\\FirstRestProject\\FirstRestProject\\obj\\",
+        "projectPath": "C:\\Meee\\Learning\\UdemyREST\\FirstRestProject\\FirstRestProject\\FirstRestProject.csproj",
+        "packagesPath": "C:\\Users\\tatia\\.nuget\\packages\\",
+        "outputPath": "C:\\Meee\\Learning\\UdemyREST\\FirstRestProject\\FirstRestProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tatiana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tatia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
