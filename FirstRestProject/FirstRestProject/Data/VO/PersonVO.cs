@@ -1,4 +1,6 @@
-﻿namespace FirstRestProject.Data.VO
+﻿//using System.Text.Json.Serialization;
+
+namespace FirstRestProject.Data.VO
 {
     public class PersonVO
     {

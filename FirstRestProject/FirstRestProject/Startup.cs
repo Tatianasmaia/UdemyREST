@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 using MySqlConnector;
 using Serilog;
 using System;
@@ -44,6 +45,16 @@ namespace FirstRestProject
             {
                 MigrateDatabase(connection);
             }
+
+            //Para que aceite mais do que um tipo de serialização
+            services.AddMvc(options => {
+                //Para aceitar a propriedade que vem no accept do header no cabeçalho do request
+                options.RespectBrowserAcceptHeader = true;
+
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/xml"));
+            })
+            .AddXmlSerializerFormatters();
 
             //For versioning API
             services.AddApiVersioning();
