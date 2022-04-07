@@ -1,5 +1,7 @@
 using FirstRestProject.Business;
 using FirstRestProject.Business.Implementations;
+using FirstRestProject.Hypermedia.Enricher;
+using FirstRestProject.Hypermedia.Filters;
 using FirstRestProject.Model.Context;
 using FirstRestProject.Repository;
 using FirstRestProject.Repository.Generic;
@@ -56,6 +58,13 @@ namespace FirstRestProject
             })
             .AddXmlSerializerFormatters();
 
+            //HATEOAS
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentRespondeEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentRespondeEnricherList.Add(new BookEnricher());
+
+            services.AddSingleton(filterOptions);
+
             //For versioning API
             services.AddApiVersioning();
 
@@ -84,6 +93,7 @@ namespace FirstRestProject
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute("DefaultApi", "{controller=values}/v{version=apiVersion}/{id?}");
             });
         }
 
