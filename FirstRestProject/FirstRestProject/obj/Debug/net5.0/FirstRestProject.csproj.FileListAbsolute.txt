@@ -119,3 +119,7 @@ C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\obj\Debug\net5.0\Fi
 C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\obj\Debug\net5.0\ref\FirstRestProject.dll
 C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.pdb
 C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\obj\Debug\net5.0\FirstRestProject.genruntimeconfig.cache
+C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Meee\Learning\UdemyREST\FirstRestProject\FirstRestProject\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll

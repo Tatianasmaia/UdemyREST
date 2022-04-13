@@ -16,6 +16,8 @@ using MySqlConnector;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace FirstRestProject
 {
@@ -68,6 +70,22 @@ namespace FirstRestProject
             //For versioning API
             services.AddApiVersioning();
 
+            //SWAGGER injection
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "REST API's From 0 to Azure with aSP.NET Core 5 and Docker",
+                        Version = "v1",
+                        Description = "API RESTful developed in course 'REST API's From 0 to Azure with aSP.NET Core 5 and Docker'",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Tatiana Maia",
+                            Url = new Uri("https://github.com/Tatianasmaia")
+                        }
+                    });
+            });
+
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
@@ -87,6 +105,20 @@ namespace FirstRestProject
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //Gera o JSON com a documentação
+            app.UseSwagger();
+
+            //Gera página html onde se pode acessar
+            app.UseSwaggerUI(c=> {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    "REST API's From 0 to Azure with aSP.NET Core 5 and Docker - v1");
+            });
+
+            //Consfigurar a swagger page
+            var options = new RewriteOptions();
+            options.AddRedirect("^$", "swagger");
+            app.UseRewriter(options);
 
             app.UseAuthorization();
 
